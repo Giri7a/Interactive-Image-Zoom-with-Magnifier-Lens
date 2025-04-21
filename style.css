@@ -1,0 +1,47 @@
+
+.product-img {
+    position: relative;
+    display: inline-block;
+}
+
+.product-img img {
+
+    display: block;
+}
+
+.magnifier-lens {
+    position: absolute;
+    width: 140px;
+    height: 180px;
+    background-color: rgba(255, 152, 0, 0.2); /* Using rgba for transparency */
+    border: 1px solid var(--orange);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.magnifier-lens.active {
+    opacity: 1;
+}
+
+.magnified-img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    transform: scale(0.5);
+    opacity: 0;
+    top: 0;
+    left: 100%;
+    border: 1px solid var(--orange);
+    background-repeat: no-repeat;
+    background-size: 800px 800px; /* Adjust based on your image */
+    pointer-events: none;
+    /* transition: opacity 0.3s, transform 0.3s; */
+}
+
+.magnified-img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
